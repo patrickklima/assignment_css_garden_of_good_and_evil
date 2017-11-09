@@ -19,16 +19,22 @@ app.use(cookieParser());
 //MIDDLEWARE AND RESOURCES
 app.use(express.static(`${__dirname}/public`));
 
+// console.log(`${__dirname}/public`);
+
 //ROUTES
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('home', {
+    morality: req.cookies.morality || '',
+    color: req.cookies.color || '',
+    food: req.cookies.food || ''
+  });
 });
 
 app.post('/', (req, res) => {
   res.cookie("morality", req.body.morality);
   res.cookie("color", req.body.color);
   res.cookie("food", req.body.food);
-  console.log(req.cookies);
+  // console.log(req.cookies);
   res.redirect('/');
 });  
 
@@ -39,7 +45,7 @@ app.post('/clear', (req, res) => {
   } else {
     res.clearCookie(toClear);
   }
-  console.log(`cookies cleared: ${toClear}`);
+  // console.log(`cookies cleared: ${toClear}`);
   res.redirect('/');
 });  
 

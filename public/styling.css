@@ -1,0 +1,41 @@
+#display{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.sqaure {
+  border: 1px solid black;
+  height: 250px;
+  width: 250px;
+  background-size: 250px 250px;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+#morality.evil {
+  background-image: url("/images/moral-evil.jpg");
+}
+#morality.neutral {
+  background-image: url("/images/moral-neutral.png");
+}
+#morality.good {
+  background-image: url("/images/moral-good.png");
+}
+#color.red {
+  background-color: red;
+}
+#color.blue {
+  background-color: blue;
+}
+#color.green {
+  background-color: green;
+}
+#food.steak {
+  background-image: url("/images/food-steak.png");
+}
+#food.vegetables {
+  background-image: url("/images/food-vegetables.jpg");
+}
+#food.candy {
+  background-image: url("/images/food-candy.png");
+}
