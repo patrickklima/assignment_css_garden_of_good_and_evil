@@ -1,0 +1,34 @@
+<div id="display">
+  <div id="morality"> </div>
+  <div id="color"> </div>
+  <div id="food"> </div>
+</div>
+<h2>The Control Panel</h2>
+<h4>Choose Your Settings</h4>
+<form id="control-panel" action='/' method="post">
+  <strong>Moral Code</strong><br>
+  <input type="radio" name="morality" value="evil" checked> Evil<br>
+  <input type="radio" name="morality" value="neutral"> Neutral<br>
+  <input type="radio" name="morality" value="good"> Good<br>
+  <br><br>
+  <strong>Favorite Color</strong><br>
+  <input type="radio" name="color" value="red" checked> Red<br>
+  <input type="radio" name="color" value="blue"> Blue<br>
+  <input type="radio" name="color" value="green"> Green</td>
+  <br><br>
+  <strong>Favorite Food</strong><br>
+  <input type="radio" name="food" value="steak" checked> Steak<br>
+  <input type="radio" name="food" value="vegetables"> Vegetables<br>
+  <input type="radio" name="food" value="candy"> Candy<br>
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<h4>Clear Your Settings</h4>
+<form id="clear-settings" action='/clear' method="post">
+  <input type="radio" name="clear" value="morality"> Moral Code<br>
+  <input type="radio" name="clear" value="food"> Food<br>
+  <input type="radio" name="clear" value="color"> Color<br>
+  <input type="radio" name="clear" value="all"> All<br>
+  <input type="submit" value="CLEAR">
+</form> 
